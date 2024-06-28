@@ -12,9 +12,6 @@
   </div>
 </template>
 
-<script lang="ts">
-</script>
-
 <style>
 .container {
   display: flex;

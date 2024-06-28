@@ -9,7 +9,7 @@
         <div class="reservations-date-picker">
           <span class="field_name">Select date*</span>
           <div class="date-picker-line">
-            <VueDatePicker class="overview-date" format="dd.MM.yyyy" v-model="reservationDate" :enable-minutes="false" />
+            <VueDatePicker class="overview-date" :min-date="new Date()" format="dd.MM.yyyy" v-model="reservationDate" :enable-minutes="false" />
             <button class="overview_reservations__submit" @click="fetchReservations">
               <span class="button__text">Check Reservations</span>
             </button>

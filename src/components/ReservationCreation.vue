@@ -13,12 +13,12 @@
           </div>
           <div class="reservation__field">
             <span class="field_name">Select date and time*</span>
-            <VueDatePicker class="reservation-time" :min-date="new Date()" format="yyyy-MM-dd HH:00" v-model="reservation.date"  @focus="error = false" :enable-minutes="true" />
+            <VueDatePicker class="reservation-time" :min-date="new Date()" :min-time="{ hours: 10, minutes: 0 }" :max-time="{ hours: 21, minutes: 0 }" format="yyyy-MM-dd HH:00" v-model="reservation.date" @focus="error = false" :enable-minutes="true" />
           </div>
           <div class="reservation__field">
             <span class="field_name">Select amount of persons*</span>
             <select v-model="reservation.persons"  @focus="error = false" class="reservation__select" name="persons" id="persons">
-              <option value="2">2</option>
+              <option selected value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
@@ -88,7 +88,7 @@ export default {
 
   methods: {
     async submitForm() {
-      if (!this.reservation.name || !this.reservation.date) {
+      if (!this.reservation.name || !this.reservation.date || !this.reservation.phone || !this.reservation.email) {
         this.message = 'Please fill out all fields.';
         this.error = true;
         return;
@@ -181,6 +181,10 @@ select {
   width: 260px;
 }
 
+option:checked {
+  color: rgba(0, 0, 0, 0.888);
+}
+
 .reservation-time {
   width: 260px !important;
 }
@@ -198,6 +202,7 @@ select {
   border-radius: 4px;
   color: #00000051;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.888);
 }
 
 .reservation__time {

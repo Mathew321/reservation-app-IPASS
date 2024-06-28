@@ -1,0 +1,5 @@
+{
+    "appService.defaultWebAppToDeploy": "None",
+    "appService.preDeployTask": "publish",
+    "appService.deploySubpath": "publish"
+}

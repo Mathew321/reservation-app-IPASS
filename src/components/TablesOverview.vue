@@ -9,7 +9,7 @@
           </div>
           <div class="tables__field">
             <span class="field_name">Select date*</span>
-            <VueDatePicker :format="dateFormat" class="tables_time" v-model="reservation.date" :enable-minutes="true" />
+            <VueDatePicker :format="dateFormat" :min-date="new Date()" class="tables_time" v-model="reservation.date" :enable-minutes="true" />
           </div>
           <button class="tables__submit">
             <span class="button__text">Check Availability</span>
