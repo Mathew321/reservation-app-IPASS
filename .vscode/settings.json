@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/e9c7c511-3ef3-4b7d-a458-7abddf1c2b40/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/dranikionline",
+    "appService.deploySubpath": "."
+}
